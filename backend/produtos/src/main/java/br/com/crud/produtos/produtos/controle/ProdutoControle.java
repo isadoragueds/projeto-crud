@@ -10,6 +10,14 @@ import br.com.anm.produtos.crud_produtos.servico.ProdutoServico;
 @RestController
 public class ProdutoControle {
 
+    @Autowired
+    private ProdutoServico ps;
+
+    @GetMapping("/listar")
+    public Iterable<ProdutoModelo> listar(){
+        return ps.listar();
+    }
+
     @GetMapping("/")
     public String rota(){
         return "A API está funcionando!";
