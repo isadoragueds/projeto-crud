@@ -1,4 +1,4 @@
-package br.com.anm.produtos.crud_produtos.modelo;
+package br.com.crud.produtos.modelo;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
