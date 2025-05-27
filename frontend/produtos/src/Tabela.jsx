@@ -1,27 +1,31 @@
-function Tabela({ vetor }) {
-  return (
-    <table className="table">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Nome</th>
-          <th>Marca</th>
-          <th>Selecionar</th>
-        </tr>
-      </thead>
+function Tabela({ vetor, selecionarProduto, removerProduto }) {
+    return (
+      <table className="table table-striped">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Marca</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
         <tbody>
-          {vetor.map((obj, indice) => (
-            <tr key={indice}>
-              <td>{indice + 1}</td>
-              <td>{obj.nome}</td>
-              <td>{obj.marca}</td>
+          {vetor((produto) => (
+            <tr key={produto.codigo}>
+              <td>{produto.nome}</td>
+              <td>{produto.marca}</td>
               <td>
-                <button className="btn btn-success"></button>
+                <button
+                  className="btn btn-success"
+                  onClick={() => selecionarProduto(produto)}
+                >
+                  Selecionar
+                </button>
               </td>
             </tr>
           ))}
         </tbody>
-    </table>
-  );
-}
-export default Tabela;
+      </table>
+    );
+  }
+  
+export default Tabela

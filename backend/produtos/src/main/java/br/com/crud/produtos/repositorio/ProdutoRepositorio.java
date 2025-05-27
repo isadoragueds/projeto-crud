@@ -5,7 +5,6 @@ import org.springframework.stereotype.Repository;
 
 import br.com.crud.produtos.modelo.ProdutoModelo;
 
-
 @Repository
 public interface ProdutoRepositorio extends CrudRepository<ProdutoModelo, Long> {
 

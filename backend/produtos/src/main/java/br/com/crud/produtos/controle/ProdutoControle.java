@@ -27,7 +27,7 @@ public class ProdutoControle {
         return ps.remover(codigo);
     }
 
-     @PostMapping("/cadastrar")
+ @PostMapping("/cadastrar")
     public ResponseEntity<?> cadastrar(@RequestBody ProdutoModelo pm){
         return ps.cadastrarAlterar(pm, "cadastrar");
     }
